@@ -21,4 +21,15 @@ basic.forever(function () {
     basic.pause(200)
     game.addScore(1)
     obstacle.delete()
+    if (game.score() == 2) {
+        speed += -100
+    } else if (game.score() == 4) {
+        speed += -100
+    } else if (game.score() == 6) {
+        speed += -50
+    } else if (game.score() == 8) {
+        speed += -50
+    } else if (game.score() % 5 == 0 && game.score() >= 50) {
+        speed += -10
+    }
 })
